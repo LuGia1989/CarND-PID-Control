@@ -3,7 +3,7 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
-In this project you'll revisit the lake race track from the Behavioral Cloning Project. This time, however, you'll implement a PID controller in C++ to maneuver the vehicle around the track! The simulator provides the cross track error (CTE) and the velocity (mph), we need to compute the appropriate steering angle based on the CTE and velocity.
+In this project we will revisit the lake race track from the Behavioral Cloning Project. This time, however, we'll implement a PID controller in C++ to maneuver the vehicle around the track! The simulator provides the cross track error (CTE) and the velocity (mph), we need to compute the appropriate steering angle based on the CTE and velocity.
 
 In this project, the hyperparameters were chosen by manually tuning to get the desized maneuver on the race track. To tune the hyperparameter Kp, I shmooed from 0.01 and increased by 0.01 until I reached 0.1.  Since Kp tends to overshoot, the small Kp tends to cause the car out of track at the sharp turn.  To avoid overshoot issue in Kp, the hyperparameter Kd is used by taking the derivative of the CTE error.  However, choosing a large value of Kd may cause the car to start wiggling around.  In this project, I chose Kd=4.  The hyperparameter Ki is the implementation of the sum of all the CTE error over time. So if this Ki is too large, it causes the car to run out of track quickly.  In this project, I chose Ki = 0.005.
 
